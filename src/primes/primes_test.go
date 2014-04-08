@@ -41,4 +41,12 @@ var _ = Describe("Primes", func() {
       primes := Primes(8)
       Expect(primes.GetPrimesFactor()).To(Equal([]int{2, 2, 2}))
     })
+    It("should return [3, 3] when input is 9", func() {
+      primes := Primes(9)
+      Expect(primes.GetPrimesFactor()).To(Equal([]int{3, 3}))
+    })
+    It("should return [2, 2, 7] when input is 28", func() {
+      primes := Primes(28)
+      Expect(primes.GetPrimesFactor()).To(Equal([]int{2, 2, 7}))
+    })
 })    

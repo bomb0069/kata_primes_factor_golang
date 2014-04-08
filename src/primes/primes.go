@@ -5,10 +5,14 @@ type Primes int
 func (primes Primes) GetPrimesFactor() (primesFactor []int) {
   if int(primes) == 1 {
 	primesFactor = []int{}	
-  } else if (int(primes) == 4) {
-    primesFactor = []int{2, 2}
-  } else {
-    primesFactor = []int{int(primes)}
+  }else{
+    for index := 2; index <= int(primes); index++ {
+      if int(primes) % index == 0 {
+          primesFactor = append(primesFactor,index)
+          primes = Primes(int(primes) / index)
+          index--
+      }
+    }
   }
   return 
 }

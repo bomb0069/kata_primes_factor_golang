@@ -59,4 +59,8 @@ var _ = Describe("Minimum PrimesFactor", func() {
       primes := Primes(4)
       Expect(primes.GetMinPrimesFactor()).To(Equal(2))
     })
+    It("should return 3 when input is 15", func() {
+      primes := Primes(15)
+      Expect(primes.GetMinPrimesFactor()).To(Equal(3))
+    })
 })

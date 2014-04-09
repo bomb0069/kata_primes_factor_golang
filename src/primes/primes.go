@@ -9,8 +9,8 @@ func (primes Primes) GetPrimesFactor() (primesFactor []int) {
     minimumPrimesFactor := primes.GetMinPrimesFactor()
     primesFactor = []int{minimumPrimesFactor}
 
-    newPrimes := Primes(int(primes) / minimumPrimesFactor)
-    primesFactor = append (primesFactor, newPrimes.GetPrimesFactor()...)
+    subPrimes := Primes(int(primes) / minimumPrimesFactor)
+    primesFactor = append (primesFactor, subPrimes.GetPrimesFactor()...)
   }
   return 
 }
